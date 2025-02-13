@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GiRobotAntennas } from "react-icons/gi";
 
 export function Header() {
+
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (

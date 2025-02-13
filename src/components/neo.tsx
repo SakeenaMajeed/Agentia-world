@@ -9,10 +9,12 @@ export function AgentiaWorld() {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+ 
     setIsMounted(true)
   }, [])
 
   useEffect(() => {
+   
     if (!isMounted) return;
 
     const handleMouseMove = (e: globalThis.MouseEvent) => {
