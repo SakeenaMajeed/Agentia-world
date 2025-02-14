@@ -9,12 +9,10 @@ export function AgentiaWorld() {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
- 
     setIsMounted(true)
   }, [])
 
   useEffect(() => {
-   
     if (!isMounted) return;
 
     const handleMouseMove = (e: globalThis.MouseEvent) => {
@@ -32,7 +30,6 @@ export function AgentiaWorld() {
     { icon: FaCodeBranch, title: "Seamless Integration", description: "Integrate AI solutions effortlessly." },
   ]
 
-  // Set a default background if not mounted
   const backgroundStyle = isMounted 
     ? {
         backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(138, 43, 226, 0.2) 0%, rgba(0, 0, 0, 0.1) 40%, transparent 60%)`,
@@ -42,31 +39,28 @@ export function AgentiaWorld() {
       }
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center text-center bg-[#0a0a0a] overflow-hidden">
-      {/* Dynamic Light Effects */}
+    <div className="relative min-h-screen flex flex-col items-center justify-center text-center bg-[#0a0a0a] overflow-hidden px-6">
       <div
         className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"
         style={backgroundStyle}
       />
 
-      {/* Title Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="relative z-10 max-w-4xl px-6 py-12"
+        className="relative z-10 max-w-4xl py-12"
       >
-        <h2 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
-        Neo <span className="text-purple-400">  Agentia </span>
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
+          Neo <span className="text-purple-400">Agentia</span>
         </h2>
         <p className="text-gray-300 text-lg mt-6">
           The ultimate AI-driven ecosystem redefining the future.
         </p>
       </motion.div>
 
-      {/* Features Section */}
       <motion.div
-        className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl"
+        className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 max-w-5xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, staggerChildren: 0.2 }}

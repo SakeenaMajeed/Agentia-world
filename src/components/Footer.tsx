@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import { GiRobotAntennas } from "react-icons/gi";
 
 export default function Footer() {
@@ -30,10 +30,10 @@ export default function Footer() {
           <h3 className="text-xl font-semibold text-white">Follow Us</h3>
           <div className="flex space-x-4 mt-5">
             {[
-              { icon: FaFacebookF, link: "#" },
-              { icon: FaTwitter, link: "#" },
-              { icon: FaLinkedinIn, link: "#" },
-              { icon: FaInstagram, link: "#" }
+              { icon: FaFacebookF, link: "https://www.facebook.com/share/1YfnQtTd73/" },
+              { icon: FaGithub, link: "https://github.com/SakeenaMajeed" },
+              { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/sakeena-majeed-86b58732a/" },
+              { icon: FaInstagram, link: "https://www.instagram.com/_sakeena_majeed/?next=%2F&hl=en" }
             ].map(({ icon: Icon, link }, index) => (
               <a key={index} href={link} className="p-3 bg-gray-800/50 hover:bg-purple-600 transition-all rounded-full shadow-md shadow-gray-700/50 backdrop-blur-md">
                 <Icon className="text-lg text-white" />

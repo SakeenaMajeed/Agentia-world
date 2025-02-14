@@ -52,8 +52,8 @@ export default function ContactForm() {
         Get in Touch
       </h2>
       <p className="text-lg text-gray-300 mt-4 max-w-3xl text-center">
-        We&apos;d love to hear from you! Fill out the form below and we&apos;ll get back to you soon.
-      </p>
+    {`We’re here to help! Send us a message, and we’ll get in touch with you shortly.`}
+     </p>
       
       <motion.form
         onSubmit={handleSubmit}
